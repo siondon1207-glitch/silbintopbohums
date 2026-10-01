@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주묻는질문 | 이용 안내 FAQ</title>
+    <meta name="description" content="서비스 이용 전 가장 궁금해하시는 핵심 질문과 답변을 명확하게 안내해 드립니다.">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background-color: #fafafa; color: #111827; padding: 50px 20px; line-height: 1.65; letter-spacing: -0.025em; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 760px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #f0f0f2; box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.02); }
+        .main-bridge-cta-wrap { width: 100%; margin-bottom: 45px; }
+        .main-bridge-cta-box { position: relative; background: #090a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 26px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; text-decoration: none !important; cursor: pointer; box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.18); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+        .main-bridge-cta-box:hover { transform: translateY(-2px); box-shadow: 0 18px 32px -8px rgba(0, 0, 0, 0.28); border-color: rgba(255, 255, 255, 0.16); }
+        .cta-left { flex: 1; z-index: 1; }
+        .cta-badge { display: inline-block; color: #94a3b8; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 6px; }
+        .cta-title { color: #ffffff; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; word-break: keep-all; }
+        .cta-desc { color: #8e95a3; font-size: 13px; margin: 0; line-height: 1.5; word-break: keep-all; }
+        .cta-btn-area { flex-shrink: 0; z-index: 1; }
+        .cta-action-btn { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #090a0f !important; padding: 11px 20px; border-radius: 8px; font-size: 13.5px; font-weight: 600; transition: all 0.2s ease; }
+        .main-bridge-cta-box:hover .cta-action-btn { background: #f1f3f5; }
+        .cta-arrow-icon { transition: transform 0.2s ease; }
+        .main-bridge-cta-box:hover .cta-arrow-icon { transform: translateX(3px); }
+        .header { text-align: left; margin-bottom: 35px; padding-bottom: 25px; border-bottom: 1px solid #f1f3f5; }
+        .category-tag { display: inline-block; font-size: 11.5px; font-weight: 700; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .header h1 { font-size: 26px; color: #0f172a; margin-bottom: 8px; font-weight: 700; letter-spacing: -0.03em; }
+        .header p { color: #64748b; font-size: 14.5px; line-height: 1.6; }
+        .faq-list { display: grid; gap: 16px; }
+        .faq-item { padding: 24px 26px; background: #ffffff; border-radius: 12px; border: 1px solid #eef0f3; transition: border-color 0.2s ease; }
+        .faq-item:hover { border-color: #cbd5e1; }
+        .faq-q { font-size: 15.5px; font-weight: 600; color: #0f172a; margin-bottom: 8px; letter-spacing: -0.02em; display: flex; align-items: baseline; gap: 10px; }
+        .faq-q-mark { font-size: 13px; font-weight: 700; color: #94a3b8; }
+        .faq-a { font-size: 13.5px; color: #64748b; line-height: 1.65; margin: 0; padding-left: 23px; word-break: keep-all; }
+        @media (max-width: 640px) {
+            body { padding: 25px 14px; }
+            .container { padding: 26px 18px; }
+            .main-bridge-cta-wrap { margin-bottom: 30px; }
+            .main-bridge-cta-box { flex-direction: column; align-items: flex-start; padding: 22px 18px; gap: 18px; }
+            .cta-title { font-size: 16px; }
+            .cta-btn-area { width: 100%; }
+            .cta-action-btn { width: 100%; justify-content: center; }
+            .header h1 { font-size: 22px; }
+            .faq-item { padding: 18px 16px; }
+            .faq-a { padding-left: 0; margin-top: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-bridge-cta-wrap">
+            <a href="/" class="main-bridge-cta-box">
+                <div class="cta-left">
+                    <span class="cta-badge">Official Service</span>
+                    <h2 class="cta-title">공식 홈페이지 메인 서비스 안내</h2>
+                    <p class="cta-desc">전체 서비스 상세 구성과 실시간 업데이트 혜택을 확인하실 수 있습니다.</p>
+                </div>
+                <div class="cta-btn-area">
+                    <div class="cta-action-btn">
+                        <span>메인 방문하기</span>
+                        <svg class="cta-arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <header class="header">
+            <span class="category-tag">Help Center & FAQ</span>
+            <h1>자주묻는질문</h1>
+            <p>이용 전 가장 궁금해하시는 핵심 질문과 상세한 안내 사항입니다.</p>
+        </header>
+
+        <section class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q"><span class="faq-q-mark">01</span>처음 이용 시 어떤 절차로 진행되나요?</div>
+                <p class="faq-a">별도의 복잡한 절차 없이 메인 홈페이지를 통해 전체 서비스 안내를 확인하신 뒤 필요한 옵션을 즉시 선택하여 이용하실 수 있습니다.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span class="faq-q-mark">02</span>모바일 환경에서도 동일하게 이용할 수 있나요?</div>
+                <p class="faq-a">모든 기기 환경에 최적화된 반응형 웹 인터페이스를 지원하므로 스마트폰, 태블릿, PC 어디서나 제약 없이 동일하게 이용 가능합니다.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q"><span class="faq-q-mark">03</span>추가적인 문의나 지원은 어떻게 받나요?</div>
+                <p class="faq-a">공식 메인 홈페이지에 마련된 실시간 안내 채널과 고객 지원 센터를 통하여 언제든지 세부적인 도움을 받으실 수 있습니다.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

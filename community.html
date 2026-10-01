@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 | 열린 소통과 정보 나눔</title>
+    <meta name="description" content="이용자 간 자유로운 경험 공유와 열린 소통을 위한 커뮤니티 공간입니다.">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background-color: #fafafa; color: #111827; padding: 50px 20px; line-height: 1.65; letter-spacing: -0.025em; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 760px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #f0f0f2; box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.02); }
+        .main-bridge-cta-wrap { width: 100%; margin-bottom: 45px; }
+        .main-bridge-cta-box { position: relative; background: #090a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 26px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; text-decoration: none !important; cursor: pointer; box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.18); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+        .main-bridge-cta-box:hover { transform: translateY(-2px); box-shadow: 0 18px 32px -8px rgba(0, 0, 0, 0.28); border-color: rgba(255, 255, 255, 0.16); }
+        .cta-left { flex: 1; z-index: 1; }
+        .cta-badge { display: inline-block; color: #94a3b8; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 6px; }
+        .cta-title { color: #ffffff; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; word-break: keep-all; }
+        .cta-desc { color: #8e95a3; font-size: 13px; margin: 0; line-height: 1.5; word-break: keep-all; }
+        .cta-btn-area { flex-shrink: 0; z-index: 1; }
+        .cta-action-btn { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #090a0f !important; padding: 11px 20px; border-radius: 8px; font-size: 13.5px; font-weight: 600; transition: all 0.2s ease; }
+        .main-bridge-cta-box:hover .cta-action-btn { background: #f1f3f5; }
+        .cta-arrow-icon { transition: transform 0.2s ease; }
+        .main-bridge-cta-box:hover .cta-arrow-icon { transform: translateX(3px); }
+        .header { text-align: left; margin-bottom: 35px; padding-bottom: 25px; border-bottom: 1px solid #f1f3f5; }
+        .category-tag { display: inline-block; font-size: 11.5px; font-weight: 700; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .header h1 { font-size: 26px; color: #0f172a; margin-bottom: 8px; font-weight: 700; letter-spacing: -0.03em; }
+        .header p { color: #64748b; font-size: 14.5px; line-height: 1.6; }
+        .board-list { display: grid; gap: 16px; }
+        .board-card { display: flex; align-items: center; justify-content: space-between; padding: 22px 26px; background: #ffffff; border-radius: 12px; border: 1px solid #eef0f3; transition: border-color 0.2s ease; }
+        .board-card:hover { border-color: #cbd5e1; }
+        .board-info h3 { font-size: 15.5px; font-weight: 600; color: #0f172a; margin-bottom: 4px; letter-spacing: -0.02em; }
+        .board-info p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.5; }
+        .board-tag { font-size: 11px; font-weight: 600; color: #475569; background: #f1f5f9; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; }
+        @media (max-width: 640px) {
+            body { padding: 25px 14px; }
+            .container { padding: 26px 18px; }
+            .main-bridge-cta-wrap { margin-bottom: 30px; }
+            .main-bridge-cta-box { flex-direction: column; align-items: flex-start; padding: 22px 18px; gap: 18px; }
+            .cta-title { font-size: 16px; }
+            .cta-btn-area { width: 100%; }
+            .cta-action-btn { width: 100%; justify-content: center; }
+            .header h1 { font-size: 22px; }
+            .board-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-bridge-cta-wrap">
+            <a href="/" class="main-bridge-cta-box">
+                <div class="cta-left">
+                    <span class="cta-badge">Official Service</span>
+                    <h2 class="cta-title">공식 홈페이지 메인 서비스 안내</h2>
+                    <p class="cta-desc">전체 서비스 상세 구성과 실시간 업데이트 혜택을 확인하실 수 있습니다.</p>
+                </div>
+                <div class="cta-btn-area">
+                    <div class="cta-action-btn">
+                        <span>메인 방문하기</span>
+                        <svg class="cta-arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <header class="header">
+            <span class="category-tag">Community & Board</span>
+            <h1>커뮤니티</h1>
+            <p>자유롭게 소통하고 유용한 정보를 공유하는 열린 참여 공간입니다.</p>
+        </header>
+
+        <section class="board-list">
+            <div class="board-card">
+                <div class="board-info">
+                    <h3>자유 소통 & 정보 교류</h3>
+                    <p>이용자 간의 자유로운 경험담과 팁을 공유하는 채널입니다.</p>
+                </div>
+                <span class="board-tag">PUBLIC</span>
+            </div>
+            <div class="board-card">
+                <div class="board-info">
+                    <h3>질문 & 지식 나눔</h3>
+                    <p>서비스 활용 중 생기는 질문을 남기고 서로 돕는 질의응답 공간입니다.</p>
+                </div>
+                <span class="board-tag">Q&A</span>
+            </div>
+            <div class="board-card">
+                <div class="board-info">
+                    <h3>제안 & 피드백 센터</h3>
+                    <p>더 나은 서비스 환경 조성을 위한 개선 아이디어를 수렴합니다.</p>
+                </div>
+                <span class="board-tag">FEEDBACK</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

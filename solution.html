@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤솔루션 | 단계별 전문 안내</title>
+    <meta name="description" content="상황과 목표에 최적화된 체계적인 맞춤형 전문 프로세스를 제안합니다.">
+
+    <!-- 한글 가독성 표준 폰트 (Pretendard) 로드 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <style>
+        /* 1. 글로벌 리셋 & 프리미엄 베이스 톤 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; 
+            background-color: #fafafa; 
+            color: #111827; 
+            padding: 50px 20px; 
+            line-height: 1.65; 
+            letter-spacing: -0.025em; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. 메인 컨테이너 */
+        .container { 
+            max-width: 760px; 
+            margin: 0 auto; 
+            background: #ffffff; 
+            padding: 40px; 
+            border-radius: 16px; 
+            border: 1px solid #f0f0f2;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.02); 
+        }
+
+        /* 3. [최상단] 럭셔리 블랙 CTA 배너 */
+        .main-bridge-cta-wrap {
+            width: 100%;
+            margin-bottom: 45px;
+        }
+
+        .main-bridge-cta-box {
+            position: relative;
+            background: #090a0f;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 26px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            text-decoration: none !important;
+            cursor: pointer;
+            box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.18);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+
+        .main-bridge-cta-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px -8px rgba(0, 0, 0, 0.28);
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .cta-left {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            color: #94a3b8;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cta-title {
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+            word-break: keep-all;
+        }
+
+        .cta-desc {
+            color: #8e95a3;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
+            word-break: keep-all;
+        }
+
+        .cta-btn-area {
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        /* 미니멀 화이트 하이컨트라스트 버튼 */
+        .cta-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #090a0f !important;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            transition: all 0.2s ease;
+        }
+
+        .main-bridge-cta-box:hover .cta-action-btn {
+            background: #f1f3f5;
+        }
+
+        .cta-arrow-icon {
+            transition: transform 0.2s ease;
+        }
+
+        .main-bridge-cta-box:hover .cta-arrow-icon {
+            transform: translateX(3px);
+        }
+
+        /* 4. 상단 헤더 영역 */
+        .header { 
+            text-align: left; 
+            margin-bottom: 35px; 
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .header h1 { 
+            font-size: 26px; 
+            color: #0f172a; 
+            margin-bottom: 8px; 
+            font-weight: 700; 
+            letter-spacing: -0.03em;
+        }
+
+        .header p { 
+            color: #64748b; 
+            font-size: 14.5px; 
+            line-height: 1.6;
+        }
+
+        /* 5. 에디토리얼 스타일 스텝 리스트 */
+        .step-list { 
+            display: grid; 
+            gap: 16px; 
+        }
+
+        .step-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 22px; 
+            padding: 24px 26px; 
+            background: #ffffff; 
+            border-radius: 12px; 
+            border: 1px solid #eef0f3;
+            transition: border-color 0.2s ease;
+        }
+
+        .step-item:hover {
+            border-color: #cbd5e1;
+        }
+
+        /* 01, 02, 03 세련된 타이포그래피 인덱스 */
+        .step-index { 
+            font-size: 14px; 
+            font-weight: 700; 
+            color: #94a3b8; 
+            letter-spacing: 0.5px; 
+            padding-top: 1px;
+            flex-shrink: 0;
+            font-family: inherit;
+        }
+
+        .step-content h3 { 
+            font-size: 15.5px; 
+            margin-bottom: 5px; 
+            color: #0f172a; 
+            font-weight: 600; 
+            letter-spacing: -0.02em;
+        }
+
+        .step-content p { 
+            font-size: 13.5px; 
+            color: #64748b; 
+            margin: 0; 
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        /* 6. 모바일 반응형 처리 */
+        @media (max-width: 640px) {
+            body { padding: 25px 14px; }
+            .container { padding: 26px 18px; }
+            .main-bridge-cta-wrap { margin-bottom: 30px; }
+            .main-bridge-cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 22px 18px;
+                gap: 18px;
+            }
+            .cta-title { font-size: 16px; }
+            .cta-desc { font-size: 12.5px; }
+            .cta-btn-area { width: 100%; }
+            .cta-action-btn { width: 100%; justify-content: center; box-sizing: border-box; }
+
+            .header h1 { font-size: 22px; }
+            .header p { font-size: 13.5px; }
+            .step-item { gap: 14px; padding: 18px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. [최상단] 럭셔리 블랙 CTA 배너 (수정 없이 메인 자동 이동) -->
+        <div class="main-bridge-cta-wrap">
+            <a href="/" class="main-bridge-cta-box">
+                <div class="cta-left">
+                    <span class="cta-badge">Official Service</span>
+                    <h2 class="cta-title">공식 홈페이지 메인 서비스 안내</h2>
+                    <p class="cta-desc">전체 서비스 상세 구성과 실시간 업데이트 혜택을 확인하실 수 있습니다.</p>
+                </div>
+                <div class="cta-btn-area">
+                    <div class="cta-action-btn">
+                        <span>메인 방문하기</span>
+                        <svg class="cta-arrow-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- 2. 본문 타이틀 영역 -->
+        <header class="header">
+            <span class="category-tag">Custom Solution</span>
+            <h1>맞춤솔루션</h1>
+            <p>상황과 목표에 최적화된 체계적인 단계별 프로세스를 제공합니다.</p>
+        </header>
+
+        <!-- 3. 단계별 가이드 본문 -->
+        <section class="step-list">
+            <div class="step-item">
+                <span class="step-index">01</span>
+                <div class="step-content">
+                    <h3>정밀 상황 분석</h3>
+                    <p>현재 상태와 요구사항을 면밀히 분석하여 불필요한 단계를 줄이고 최적의 플랜을 수립합니다.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <span class="step-index">02</span>
+                <div class="step-content">
+                    <h3>맞춤형 가이드 설계</h3>
+                    <p>개개인의 상황에 맞춘 최적화된 경로와 체계적인 실행 가이드를 제안해 드립니다.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <span class="step-index">03</span>
+                <div class="step-content">
+                    <h3>신속한 실행 및 사후 피드백</h3>
+                    <p>실제 적용 과정에서의 문의 사항을 지속적으로 지원하며 안정적인 결과를 돕습니다.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
